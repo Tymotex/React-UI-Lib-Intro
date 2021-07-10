@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import NotUglyButton from './components/NotUglyButton';
+import Topnav from './components/Topnav';
+import Carousel from './components/Carousel'
 import './App.css';
+import {
+  Container
+} from 'reactstrap';
+import Deck from './components/Deck';
+import { motion } from "framer-motion"
+import CoolChart from './components/CoolChart';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Topnav />
+      <Carousel />
+      <Container>
+        <br />
+        <Deck />
+        <CoolChart />
+      </Container>
     </div>
   );
 }
